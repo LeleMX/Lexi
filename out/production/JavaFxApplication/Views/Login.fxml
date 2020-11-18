@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
+   <children>
+      <ImageView fitHeight="233.0" fitWidth="364.0" layoutX="14.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/box_PNG92.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#bcbcbc8f" height="259.0" layoutX="248.0" layoutY="83.0" stroke="#ffffff00" strokeType="INSIDE" strokeWidth="0.0" width="282.0" />
+      <JFXButton fx:id="Bentrar" buttonType="RAISED" layoutX="365.0" layoutY="275.0" onMouseClicked="#validarInicio" ripplerFill="#ffffff00" style="-fx-background-color: #FFFFFF;" text="Entrar" />
+      <JFXTextField fx:id="Fcorreo" alignment="CENTER" focusColor="#909090" layoutX="300.0" layoutY="189.0" prefHeight="23.0" prefWidth="178.0" promptText="Usuario" unFocusColor="WHITE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </JFXTextField>
+      <Text fill="#797979" layoutX="344.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: verdana; -fx-font-size: 30px;" text="LOGIN" />
+      <Text fill="#797979" layoutX="44.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: verdana; -fx-font-size: 60px;" text="LEXI" />
+      <JFXPasswordField fx:id="Fcontrasena" alignment="CENTER" focusColor="#909090" layoutX="300.0" layoutY="233.0" prefHeight="25.0" prefWidth="178.0" promptText="Contraseña" style="-fx-font-family: verdana;" unFocusColor="WHITE" />
+      <Label layoutX="350.0" layoutY="315.0" style="-fx-font-family: verdana;" text="Crear cuenta" />
+   </children>
+</AnchorPane>

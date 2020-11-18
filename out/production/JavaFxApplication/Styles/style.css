@@ -1,0 +1,24 @@
+.paquetesButtom:hover {
+    -fx-border-color: #FBE795 ;
+    -fx-border-width: 0px 0px 3px 0px;
+}
+
+.empleadosButtom:hover {
+    -fx-border-color: #B44FFF ;
+    -fx-border-width: 0px 0px 3px 0px;
+}
+
+.clientesButtom:hover {
+    -fx-border-color: #53FFE8 ;
+    -fx-border-width: 0px 0px 3px 0px;
+}
+
+.exitButtom:hover {
+    -fx-border-color: #FF2A2A ;
+    -fx-border-width: 0px 0px 3px 0px;
+}
+
+.root{
+    -fx-background-radius: 5;
+}
+
