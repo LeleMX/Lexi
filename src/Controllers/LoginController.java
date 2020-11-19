@@ -34,7 +34,7 @@ public class LoginController {
                 ventanaEmpleados();
             }
         } else {
-            JOptionPane.showMessageDialog(null, "CONTRASEÑA O USUARIO INCORRECTO!");
+
         }
     }
 
