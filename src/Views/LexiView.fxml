@@ -6,31 +6,55 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LexiController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LexiController">
    <children>
-      <HBox minHeight="-Infinity" prefHeight="40.0" prefWidth="600.0" spacing="15.0" style="-fx-background-color: #FFFF;">
-         <children>
-            <JFXButton fx:id="paquetesButtom" maxHeight="1.7976931348623157E308" prefWidth="80.0" styleClass="paquetesButtom" stylesheets="@../Styles/style.css" text="Paquetes" />
-            <JFXButton fx:id="empleadosButtom" maxHeight="1.7976931348623157E308" prefWidth="80.0" styleClass="empleadosButtom" stylesheets="@../Styles/style.css" text="Empleados" />
-            <JFXButton fx:id="clientesButtom" maxHeight="1.7976931348623157E308" prefWidth="80.0" styleClass="clientesButtom" stylesheets="@../Styles/style.css" text="Clientes" />
-            <JFXButton fx:id="exitButtom" maxHeight="1.7976931348623157E308" onMouseClicked="#exitLexi" prefWidth="80.0" styleClass="exitButtom" stylesheets="@../Styles/style.css" text="Salir">
-               <HBox.margin>
-                  <Insets left="220.0" />
-               </HBox.margin>
-               <graphic>
-                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../Desing/src/Assets/2x/baseline_exit_to_app_black_18dp.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </JFXButton>
-         </children>
+      <HBox layoutX="79.0" minHeight="-Infinity" prefHeight="40.0" prefWidth="863.0" spacing="15.0" style="-fx-background-color: #FFFF;" AnchorPane.leftAnchor="79.0" AnchorPane.rightAnchor="0.0">
          <padding>
             <Insets left="15.0" />
          </padding>
+         <children>
+            <JFXButton fx:id="usuarioButtom" prefHeight="40.0" prefWidth="92.0" styleClass="usuarioButtom" stylesheets="@../Styles/style.css" text="Usuario">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Assets/2x/baseline_person_black_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets left="710.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
       </HBox>
+      <VBox layoutX="41.0" layoutY="83.0" prefHeight="200.0" prefWidth="80.0" style="-fx-background-color: #727272;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton fx:id="paquetesButtom" maxHeight="1.7976931348623157E308" prefHeight="60.0" prefWidth="80.0" styleClass="paquetesButtom" stylesheets="@../Styles/style.css" text="Paquetes" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="clientesButtom" maxHeight="1.7976931348623157E308" prefHeight="60.0" prefWidth="80.0" styleClass="clientesButtom" stylesheets="@../Styles/style.css" text="Clientes" textFill="WHITE">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="empleadosButtom" maxHeight="1.7976931348623157E308" prefHeight="60.0" prefWidth="80.0" styleClass="empleadosButtom" stylesheets="@../Styles/style.css" text="Empleados" textFill="WHITE" />
+            <JFXButton fx:id="exitButtom" maxHeight="1.7976931348623157E308" onMouseClicked="#exitLexi" prefHeight="60.0" prefWidth="80.0" styleClass="exitButtom" stylesheets="@../Styles/style.css" text="Salir" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Assets/2x/baseline_close_white_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets top="330.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
