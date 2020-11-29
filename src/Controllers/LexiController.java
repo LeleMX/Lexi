@@ -34,6 +34,16 @@ public class LexiController {
         employePlace.getChildren().setAll(pane1);
     }
 
+    public void cambiarVentanaClientes () throws IOException {
+        Pane pane1 = FXMLLoader.load(getClass().getResource("/Views/ClientesView.fxml"));
+        employePlace.getChildren().setAll(pane1);
+    }
+
+    public void cambiarVentanaPaquetes () throws IOException {
+        Pane pane1 = FXMLLoader.load(getClass().getResource("/Views/PaquetesView.fxml"));
+        employePlace.getChildren().setAll(pane1);
+    }
+
     public void cerrarVentana() {
         paquetesButtom.getParent().getScene().getWindow();
         Stage stage1 = (Stage) paquetesButtom.getParent().getScene().getWindow();

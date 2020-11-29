@@ -2,17 +2,86 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="560.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.EmpleadosViewController">
    <children>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" ellipsisString="" layoutX="729.0" layoutY="485.0" onMouseClicked="#addEmpleado" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 100; -fx-background-radius: 100; -fx-background-color: #C9F589;" text="Button" />
-      <VBox fx:id="employeHolder" layoutX="393.0" layoutY="151.0" prefHeight="473.0" prefWidth="820.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <padding>
-            <Insets left="25.0" right="25.0" />
-         </padding>
-      </VBox>
+      <TableView fx:id="employeHolder" layoutX="14.0" layoutY="14.0" prefHeight="465.0" prefWidth="791.0">
+        <columns>
+          <TableColumn fx:id="id_empleadoColumn" prefWidth="253.99998474121094" text="Id_empleado" />
+          <TableColumn fx:id="nombreColumn" prefWidth="241.0" text="Nombre" />
+            <TableColumn fx:id="rolColumn" prefWidth="295.0" text="Rol" />
+        </columns>
+      </TableView>
+      <HBox layoutX="277.0" layoutY="496.0" prefHeight="50.0" prefWidth="266.0">
+         <children>
+            <JFXButton buttonType="RAISED" contentDisplay="CENTER" ellipsisString="" onMouseClicked="#refreshTable" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 100; -fx-background-radius: 100; -fx-background-color: #73B9FF;" textFill="#ffffff00">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="33.0" onMouseClicked="#refreshTable" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Assets/2x/baseline_refresh_black_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" contentDisplay="CENTER" ellipsisString="" onMouseClicked="#eliminarEmpleado" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 100; -fx-background-radius: 100; -fx-background-color: #FF716D;" textFill="#ffffff00">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Assets/2x/baseline_delete_black_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" contentDisplay="CENTER" ellipsisString="" onMouseClicked="#VentanaEditar" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 100; -fx-background-radius: 100; -fx-background-color: #F9DD84;" textFill="#ffffff00">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="33.0" onMouseClicked="#refreshTable" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Assets/2x/baseline_create_black_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" contentDisplay="CENTER" ellipsisString="" onMouseClicked="#addEmpleado" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 100; -fx-background-radius: 100; -fx-background-color: #C9F589;" textFill="#ffffff00">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Assets/2x/baseline_add_black_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

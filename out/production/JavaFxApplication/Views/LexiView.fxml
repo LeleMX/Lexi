@@ -15,29 +15,15 @@
          <padding>
             <Insets left="15.0" />
          </padding>
-         <children>
-            <JFXButton fx:id="usuarioButtom" prefHeight="40.0" prefWidth="92.0" styleClass="usuarioButtom" stylesheets="@../Styles/style.css" text="Usuario">
-               <graphic>
-                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Assets/2x/baseline_person_black_18dp.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <HBox.margin>
-                  <Insets left="710.0" />
-               </HBox.margin>
-            </JFXButton>
-         </children>
       </HBox>
       <VBox layoutX="41.0" layoutY="83.0" prefHeight="200.0" prefWidth="80.0" style="-fx-background-color: #727272;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <JFXButton fx:id="paquetesButtom" maxHeight="1.7976931348623157E308" prefHeight="60.0" prefWidth="80.0" styleClass="paquetesButtom" stylesheets="@../Styles/style.css" text="Paquetes" textFill="WHITE">
+            <JFXButton fx:id="paquetesButtom" maxHeight="1.7976931348623157E308" onMouseClicked="#cambiarVentanaPaquetes" prefHeight="60.0" prefWidth="80.0" styleClass="paquetesButtom" stylesheets="@../Styles/style.css" text="Paquetes" textFill="WHITE">
                <VBox.margin>
                   <Insets top="40.0" />
                </VBox.margin>
             </JFXButton>
-            <JFXButton fx:id="clientesButtom" maxHeight="1.7976931348623157E308" prefHeight="60.0" prefWidth="80.0" styleClass="clientesButtom" stylesheets="@../Styles/style.css" text="Clientes" textFill="WHITE">
+            <JFXButton fx:id="clientesButtom" maxHeight="1.7976931348623157E308" onMouseClicked="#cambiarVentanaClientes" prefHeight="60.0" prefWidth="80.0" styleClass="clientesButtom" stylesheets="@../Styles/style.css" text="Clientes" textFill="WHITE">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
