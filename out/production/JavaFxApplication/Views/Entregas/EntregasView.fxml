@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="560.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Entregas.EntregasViewController">
+   <children>
+      <TableView fx:id="entregasHolder" layoutX="15.0" layoutY="22.0" prefHeight="465.0" prefWidth="791.0">
+         <columns>
+            <TableColumn fx:id="id_entregaColumn" prefWidth="159.99998474121094" text="ID_entrega" />
+            <TableColumn fx:id="nombre_paqColumn" prefWidth="196.0" text="Nombre paquete" />
+            <TableColumn fx:id="nombre_clienteColumn" minWidth="0.0" prefWidth="234.0" text="Nombre Cliente" />
+            <TableColumn fx:id="nombre_provColumn" prefWidth="200.0" text="Nombre proveedor" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

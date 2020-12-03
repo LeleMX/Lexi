@@ -1,5 +1,8 @@
 package Controllers;
 
+import Controllers.Paquetes.EditPaqueteController;
+import Controllers.Paquetes.PaquetesViewController;
+import Controllers.Paquetes.PaquetesViewEmpleado;
 import Model.DBManager;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
@@ -9,6 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import sun.security.pkcs11.Secmod;
 
 import javax.swing.*;
 import java.io.IOException;
@@ -20,23 +24,34 @@ public class LoginController {
     private JFXPasswordField Fcontrasena;
 
     public void validarInicio () {
+        LexiEmployeController lexiEmployeController = new LexiEmployeController();
+        PaquetesViewEmpleado paquetesViewEmpleado = new PaquetesViewEmpleado();
+        EditPaqueteController editPaqueteController = new EditPaqueteController();
+        PaquetesViewController paquetesViewController = new PaquetesViewController();
 
         DBManager.init();
 
         String contraseña = Fcontrasena.getText().toLowerCase();
-        String email = Fcorreo.getText();
+        String usuario = Fcorreo.getText();
 
-        if (DBManager.validarContraseña(email,contraseña)) {
-            if (DBManager.verRol(email).equals("jefe")) {
+        if (DBManager.validarContraseña(usuario,contraseña)) {
+            if (DBManager.verRol(usuario).equals("jefe")) {
                 ventanaJefe();
+                editPaqueteController.recibirNombreEmpleado(usuario);
+                paquetesViewController.recibirNombreEmpleado(usuario);
             }
-            if (DBManager.verRol(email).equals("empleado")) {
+            if (DBManager.verRol(usuario).equals("empleado")) {
                 ventanaEmpleados();
+                long id_empleado = DBManager.regresarIdProveedor(usuario);
+                lexiEmployeController.recibirID(id_empleado);
+                paquetesViewEmpleado.recibirNombreEmpleado(usuario);
+                editPaqueteController.recibirNombreEmpleado(usuario);
             }
         } else {
 
         }
     }
+
 
     public void ventanaJefe () {
         try {

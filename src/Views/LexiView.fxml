@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -29,6 +30,12 @@
                </VBox.margin>
             </JFXButton>
             <JFXButton fx:id="empleadosButtom" maxHeight="1.7976931348623157E308" onMouseClicked="#cambiarVentanaEmpleados" prefHeight="60.0" prefWidth="80.0" styleClass="empleadosButtom" stylesheets="@../Styles/style.css" text="Empleados" textFill="WHITE" />
+            <JFXButton fx:id="entregasButtom" maxHeight="1.7976931348623157E308" onMouseClicked="#cambiarVentanaEntregas" prefHeight="60.0" prefWidth="80.0" stylesheets="@../Styles/style.css" text="Entregas" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="empleadosButtom" />
+                  <String fx:value="entregasButtom" />
+               </styleClass>
+            </JFXButton>
             <JFXButton fx:id="exitButtom" maxHeight="1.7976931348623157E308" onMouseClicked="#exitLexi" prefHeight="60.0" prefWidth="80.0" styleClass="exitButtom" stylesheets="@../Styles/style.css" text="Salir" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">

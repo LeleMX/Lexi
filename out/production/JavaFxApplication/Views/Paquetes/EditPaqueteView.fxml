@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Paquetes.EditPaqueteController">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="266.0" layoutY="347.0" onMouseClicked="#modificarPaquete" style="-fx-background-color: #FBE795;" text="Confirmar" />
+      <JFXTextField fx:id="NombreField" alignment="CENTER" focusColor="#fbe795" layoutX="233.0" layoutY="175.0" promptText="Nombre" />
+      <Label layoutX="250.0" layoutY="41.0" text="EDITAR">
+         <font>
+            <Font name="Verdana" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

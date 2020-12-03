@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LexiEmployeController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LexiEmployeController">
    <children>
-      <HBox layoutX="1.0" minHeight="-Infinity" prefHeight="40.0" prefWidth="600.0" spacing="15.0" style="-fx-background-color: #FFFF;">
+      <HBox layoutX="1.0" minHeight="-Infinity" prefHeight="40.0" prefWidth="877.0" style="-fx-background-color: #D1D1D1;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <JFXButton fx:id="paquetesButtom" maxHeight="1.7976931348623157E308" prefWidth="80.0" styleClass="paquetesButtom" stylesheets="@../Styles/style.css" text="Paquetes" />
-            <JFXButton fx:id="exitButtom" maxHeight="1.7976931348623157E308" onMouseClicked="#exitEmpleados" prefWidth="80.0" styleClass="exitButtom" stylesheets="@../Styles/style.css" text="Salir">
+            <JFXButton fx:id="paquetesButtom" maxHeight="1.7976931348623157E308" onMouseClicked="#cambiarVentanaPaquetes" prefHeight="40.0" prefWidth="115.0" styleClass="paquetesButtomE" stylesheets="@../Styles/style.css" text="Paquetes">
                <HBox.margin>
-                  <Insets left="410.0" />
+                  <Insets />
+               </HBox.margin></JFXButton>
+            <JFXButton fx:id="clientesButtom" maxHeight="1.7976931348623157E308" onMouseClicked="#cambiarVentanaClientes" prefHeight="40.0" prefWidth="101.0" stylesheets="@../Styles/style.css" text="Clientes" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="clientesButtom" />
+                  <String fx:value="clientesButtomE" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton fx:id="exitButtom" maxHeight="1.7976931348623157E308" onMouseClicked="#exitEmpleados" prefWidth="80.0" styleClass="exitButtomE" stylesheets="@../Styles/style.css" text="Salir">
+               <HBox.margin>
+                  <Insets left="550.0" />
                </HBox.margin>
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
@@ -26,9 +36,7 @@
                </graphic>
             </JFXButton>
          </children>
-         <padding>
-            <Insets left="15.0" />
-         </padding>
       </HBox>
+      <Pane fx:id="employePlace" layoutX="40.0" layoutY="40.0" prefHeight="560.0" prefWidth="820.0" />
    </children>
 </AnchorPane>

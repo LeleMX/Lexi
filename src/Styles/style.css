@@ -1,10 +1,20 @@
 .paquetesButtom:hover {
-    -fx-border-color: #FBE795 ;
+    -fx-border-color: #fbe795;
     -fx-border-width: 0px 0px 0px 3px;
+}
+
+.paquetesButtomE:hover {
+    -fx-border-color: #fbe795;
+    -fx-border-width: 0px 0px 3px 0px;
 }
 
 .empleadosButtom:hover {
     -fx-border-color: #B44FFF ;
+    -fx-border-width: 0px 0px 0px 3px;
+}
+
+.entregasButtom:hover {
+    -fx-border-color: #F984E0 ;
     -fx-border-width: 0px 0px 0px 3px;
 }
 
@@ -14,10 +24,21 @@
     -fx-border-width: 0px 0px 0px 3px;
 }
 
+.clientesButtomE:hover {
+    -fx-border-color: #53FFE8 ;
+    -fx-border-width: 0px 0px 3px 0px;
+}
+
 .exitButtom:hover {
     -fx-border-color: #FF2A2A ;
     -fx-border-width: 0px 0px 0px 3px;
 }
+
+.exitButtomE:hover {
+    -fx-border-color: #FF2A2A ;
+    -fx-border-width: 0px 0px 3px 0px;
+}
+
 
 .usuarioButtom:hover {
     -fx-border-color: #D1FFCF ;

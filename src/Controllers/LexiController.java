@@ -30,17 +30,22 @@ public class LexiController {
     }
 
     public void cambiarVentanaEmpleados () throws IOException {
-        Pane pane1 = FXMLLoader.load(getClass().getResource("/Views/EmpleadosView.fxml"));
+        Pane pane1 = FXMLLoader.load(getClass().getResource("/Views/Empleado/EmpleadosView.fxml"));
         employePlace.getChildren().setAll(pane1);
     }
 
     public void cambiarVentanaClientes () throws IOException {
-        Pane pane1 = FXMLLoader.load(getClass().getResource("/Views/ClientesView.fxml"));
+        Pane pane1 = FXMLLoader.load(getClass().getResource("/Views/Cliente/ClientesView.fxml"));
         employePlace.getChildren().setAll(pane1);
     }
 
     public void cambiarVentanaPaquetes () throws IOException {
-        Pane pane1 = FXMLLoader.load(getClass().getResource("/Views/PaquetesView.fxml"));
+        Pane pane1 = FXMLLoader.load(getClass().getResource("/Views/Paquetes/PaquetesView.fxml"));
+        employePlace.getChildren().setAll(pane1);
+    }
+
+    public void cambiarVentanaEntregas () throws IOException {
+        Pane pane1 = FXMLLoader.load(getClass().getResource("/Views/Entregas/EntregasView.fxml"));
         employePlace.getChildren().setAll(pane1);
     }
 
