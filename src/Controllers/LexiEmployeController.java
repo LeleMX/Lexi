@@ -1,7 +1,6 @@
 package Controllers;
 
 import Controllers.Paquetes.PaquetesViewEmpleado;
-import Model.DBManager;
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -39,12 +38,6 @@ public class LexiEmployeController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public void regresarNombreEmpleado () {
-        String nombreEmpleado = DBManager.regresarNombreEmpleado(id_empleadoO);
-        System.out.println(" 2  " + nombreEmpleado);
-        nombre = nombreEmpleado;
     }
 
     public void cambiarVentanaPaquetes () throws IOException {

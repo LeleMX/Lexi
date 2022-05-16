@@ -15,7 +15,7 @@
          <children>
             <JFXButton fx:id="paquetesButtom" maxHeight="1.7976931348623157E308" onMouseClicked="#cambiarVentanaPaquetes" prefHeight="40.0" prefWidth="115.0" styleClass="paquetesButtomE" stylesheets="@../Styles/style.css" text="Paquetes">
                <HBox.margin>
-                  <Insets right="30.0" />
+                  <Insets />
                </HBox.margin></JFXButton>
             <JFXButton fx:id="clientesButtom" maxHeight="1.7976931348623157E308" onMouseClicked="#cambiarVentanaClientes" prefHeight="40.0" prefWidth="101.0" stylesheets="@../Styles/style.css" text="Clientes" textFill="WHITE">
                <styleClass>
@@ -25,7 +25,7 @@
             </JFXButton>
             <JFXButton fx:id="exitButtom" maxHeight="1.7976931348623157E308" onMouseClicked="#exitEmpleados" prefWidth="80.0" styleClass="exitButtomE" stylesheets="@../Styles/style.css" text="Salir">
                <HBox.margin>
-                  <Insets left="680.0" />
+                  <Insets left="550.0" />
                </HBox.margin>
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
@@ -37,6 +37,6 @@
             </JFXButton>
          </children>
       </HBox>
-      <Pane fx:id="employePlace" layoutX="39.0" layoutY="43.0" prefHeight="560.0" prefWidth="820.0" />
+      <Pane fx:id="employePlace" layoutX="40.0" layoutY="40.0" prefHeight="560.0" prefWidth="820.0" />
    </children>
 </AnchorPane>

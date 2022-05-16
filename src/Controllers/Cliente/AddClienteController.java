@@ -15,7 +15,8 @@ public class AddClienteController {
 
     public void AltaCliente () {
         System.out.println("1");
-        long telefono = Integer.parseInt(TelefonoField.getText());
+
+        long telefono = Long.parseLong(TelefonoField.getText());
 
         dbManager.crearCliente(NombreField.getText(), ApellidoField.getText(), DireccionField.getText(), telefono);
 
